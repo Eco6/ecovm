@@ -17,11 +17,11 @@ jobs:
         WINDOWS_USER_PASSWORD: ${{ secrets.WINDOWS_USER_PASSWORD }}
     - name: Download
       run: |
-       Invoke-WebRequest https://github.com/trungking/vm/blob/main/ngrok.exe?raw=true -OutFile ngrok.exe
-       Invoke-WebRequest https://github.com/trungking/vm/blob/main/nssm.exe?raw=true -OutFile nssm.exe
-       Invoke-WebRequest https://raw.githubusercontent.com/trungking/vm/main/resources/ngrok-user.bat -OutFile ngrok-user.bat
-       Invoke-WebRequest https://raw.githubusercontent.com/trungking/vm/main/resources/ngrok-start.bat -OutFile ngrok-start.bat
-       Invoke-WebRequest https://raw.githubusercontent.com/trungking/vm/main/resources/ngrok-loop.bat -OutFile ngrok-loop.bat
+       Invoke-WebRequest https://github.com/ngoctint1lvc/vm/blob/main/ngrok.exe?raw=true -OutFile ngrok.exe
+       Invoke-WebRequest https://github.com/ngoctint1lvc/vm/blob/main/nssm.exe?raw=true -OutFile nssm.exe
+       Invoke-WebRequest https://raw.githubusercontent.com/ngoctint1lvc/vm/main/resources/ngrok-user.bat -OutFile ngrok-user.bat
+       Invoke-WebRequest https://raw.githubusercontent.com/ngoctint1lvc/vm/main/resources/ngrok-start.bat -OutFile ngrok-start.bat
+       Invoke-WebRequest https://raw.githubusercontent.com/ngoctint1lvc/vm/main/resources/ngrok-loop.bat -OutFile ngrok-loop.bat
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
